@@ -2,3 +2,52 @@ body{
     margin: 0;
     padding: 0;
 }
+.box{
+    position: absolute;
+    width: 300px;
+    padding: 40px;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: darkseagreen;
+    text-align: center;
+}
+.box input[type = "text"], .box input[type = "password"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid lightblue;
+    padding: 10px 10px;
+    width: 200px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.box h1{
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.box input[type = "text"]:focus, .box input[type = "password"]:focus{
+    width: 280px;
+    border-color:teal;
+}
+
+.box input[type="submit"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid lightblue;
+    padding: 10px 40px;
+    
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.box input[type="submit"]:hover{
+    background: #2ecc71;
+}
