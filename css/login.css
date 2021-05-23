@@ -34,7 +34,7 @@ body{
     border-color:teal;
 }
 
-.box input[type="submit"]{
+.box input[type="submit"], .box input[type="registration"]{
     border:0;
     background: none;
     display: block;
@@ -48,6 +48,6 @@ body{
     cursor: pointer;
 }
 
-.box input[type="submit"]:hover{
+.box input[type="submit"]:hover,.box input[type="registration"]:hover{
     background: #2ecc71;
 }
