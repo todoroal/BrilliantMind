@@ -80,6 +80,13 @@ p {
     margin-right: 16px;
 }
 
+.container {
+    display: inline-block;
+    padding-top: 30px;
+    padding-left: 580px;
+    
+}
+
 #about-us {
     max-width: 800px;
     margin: auto;
