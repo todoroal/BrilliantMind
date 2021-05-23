@@ -3,7 +3,11 @@
     text-align: center;
 }
 
+body{
+font-family: "Tw Cen MT";
 
+
+}
 
 img.headerImage {
     position: relative;
@@ -21,14 +25,14 @@ nav{
 
 /* Dropdown Button */
 .drop {
-    background-color: darkseagreen;
+    background-color: #86998c;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
 }
 .drop2 {
-    background-color: darkseagreen;
+    background-color: #86998c;
     color: white;
     padding: 16px;
     font-size: 16px;
