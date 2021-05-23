@@ -80,10 +80,9 @@ p {
     margin-right: 16px;
 }
 
-.container {
-    display: inline-block;
-    padding-top: 30px;
-    padding-left: 580px;
+.center {
+    margin-top: 100px;
+
     
 }
 
@@ -97,10 +96,44 @@ p {
     margin: auto;
 }
 
-#box {
+#box1 {
     display: inline-block;
     width: 31.5%;
-    padding: 20px;
+    padding-top: 80px;
+    padding-bottom: 300px;
+    margin-bottom: 30px;
+    background-color: #86998c;
+    box-sizing: border-box;
+    font-family: "Tw Cen MT";
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 12px;
+    color: white;
+}
+
+#box2 {
+    display: inline-block;
+    width: 31.5%;
+    padding-top: 80px;
+    padding-bottom: 300px;
+    margin-bottom: 30px;
+    background-color: #86998c;
+    box-sizing: border-box;
+    font-family: "Tw Cen MT";
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 12px;
+    color: white;
+}
+
+#box3{
+    display: inline-block;
+    width: 31.5%;
+    padding-top: 80px;
+    padding-bottom: 300px;
+    margin-bottom: 30px;
     background-color: #86998c;
     box-sizing: border-box;
     font-family: "Tw Cen MT";
