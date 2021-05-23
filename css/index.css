@@ -96,13 +96,14 @@ p {
     margin: auto;
 }
 
-#box1 {
+#boxCalendar, #boxEShop, #boxChat {
+    background-image: url("images/calendar_leaves.jpg");
     display: inline-block;
     width: 31.5%;
-    padding-top: 80px;
-    padding-bottom: 300px;
+    padding-top: 20px;
+    padding-bottom: 30px;
     margin-bottom: 30px;
-    background-color: #86998c;
+    background-color: #E2EEE7;
     box-sizing: border-box;
     font-family: "Tw Cen MT";
     font-size: 12pt;
@@ -110,41 +111,19 @@ p {
     text-align: center;
     letter-spacing: 12px;
     color: white;
+    border: 1px solid black;
 }
 
-#box2 {
-    display: inline-block;
-    width: 31.5%;
-    padding-top: 80px;
-    padding-bottom: 300px;
-    margin-bottom: 30px;
-    background-color: #86998c;
-    box-sizing: border-box;
-    font-family: "Tw Cen MT";
-    font-size: 12pt;
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: 12px;
-    color: white;
+.textBox{
+    position: relative;
+    text-decoration: none;
+    color:black;
+    bottom:10px;
 }
-
-#box3{
-    display: inline-block;
-    width: 31.5%;
-    padding-top: 80px;
-    padding-bottom: 300px;
-    margin-bottom: 30px;
-    background-color: #86998c;
-    box-sizing: border-box;
-    font-family: "Tw Cen MT";
-    font-size: 12pt;
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: 12px;
-    color: white;
-}
-
 #impressum {
     max-width: 800px;
     margin: auto;
+}
+#newsdiv{
+text-align: center;
 }
