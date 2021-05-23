@@ -9,6 +9,7 @@ const backDrop = document.getElementById('modalBackDrop');
 const eventTitleInput = document.getElementById('eventTitleInput');
 const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
+
 function openModal(date) {
     clicked = date;
 
@@ -23,6 +24,7 @@ function openModal(date) {
 
     backDrop.style.display = 'block';
 }
+
 
 function load() {
     const dt = new Date();
@@ -81,6 +83,7 @@ function load() {
     }
 }
 
+
 function closeModal() {
     eventTitleInput.classList.remove('error');
     newEventModal.style.display = 'none';
@@ -90,6 +93,7 @@ function closeModal() {
     clicked = null;
     load();
 }
+
 
 function saveEvent() {
     if (eventTitleInput.value) {
@@ -107,11 +111,13 @@ function saveEvent() {
     }
 }
 
+
 function deleteEvent() {
     events = events.filter(e => e.date !== clicked);
     localStorage.setItem('events', JSON.stringify(events));
     closeModal();
 }
+
 
 function initButtons() {
     document.getElementById('nextButton').addEventListener('click', () => {
