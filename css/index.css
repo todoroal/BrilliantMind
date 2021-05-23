@@ -22,7 +22,7 @@
 }
 
 #logo-name {
-    font-size: 32px;
+    font-size: 32pt;
     font-family: "Tw Cen MT";
     font-weight: normal;
     letter-spacing: 0.8em;
@@ -94,11 +94,13 @@ p {
     display: inline-block;
     width: 31.5%;
     padding: 20px;
-    background-color: darkseagreen;
+    background-color: #86998c;
     box-sizing: border-box;
-    font-family: Verdana;
-    font-size: 1em;
+    font-family: "Tw Cen MT";
+    font-size: 12pt;
+    font-weight: bold;
     text-align: center;
+    letter-spacing: 12px;
     color: white;
 }
 
