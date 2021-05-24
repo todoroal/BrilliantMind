@@ -1,4 +1,5 @@
 <?php
+    $nick = $_POST['nick']
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $password = $_POST['password'];
