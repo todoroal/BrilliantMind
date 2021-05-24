@@ -43,7 +43,7 @@ function removeCartItem(event) {
 
 function quantityChanged(event) {
     var input = event.target
-    if (isNaN(input.value) || input.value <= 0) {
+    if ( input.value <= 0) {
         input.value = 1
     }
     updateCartTotal()
@@ -99,5 +99,5 @@ function updateCartTotal() {
         total = total + (price * quantity)
     }
     total = Math.round(total * 100) / 100
-    document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
+    document.getElementsByClassName('cart-total-price')[0].innerText = '€' + total.value
 }
