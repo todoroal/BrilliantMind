@@ -1,3 +1,7 @@
+body {
+    background-color: #ebefeb;
+}
+
 #top {
     text-align: center;
 }
@@ -10,33 +14,25 @@
     padding: 16px;
 }
 
-#logo {
-    color: white;
-    background-color: darkseagreen;
-    display: inline-block;
-    font-size: 32px;
-    font-weight: bold;
-    font-family: "Tw Cen MT";
-    padding: 8px;
-    margin-top: 16px;
-}
-
 #logo-name {
-    font-size: 32pt;
+    font-size: 45pt;
     font-family: "Tw Cen MT";
+    color: dimgray;
     font-weight: normal;
-    letter-spacing: 0.8em;
+    letter-spacing: 0.9em;
     margin: 8px;
 }
 
 #navigation a {
     color: dimgrey;
     font-family: Verdana;
-    padding: 8px;
+    font-size: 10pt;
+    text-transform: uppercase;
+    padding: 100px;
 }
 
 #navigation a:hover {
-    color: darkseagreen;
+    color: #86998c;
     font-weight: bold;
 }
 
@@ -77,16 +73,15 @@ p {
     width: 99.5%;
     margin-top: 16px;
     margin-bottom: 16px;
-    margin-right: 16px;
+
 }
 
 .center {
     margin-top: 100px;
-
-    
 }
 
 #about-us {
+    background-color: white;
     max-width: 800px;
     margin: auto;
 }
@@ -97,13 +92,12 @@ p {
 }
 
 #boxCalendar, #boxEShop, #boxChat {
-    background-image: url("images/calendar_leaves.jpg");
     display: inline-block;
     width: 31.5%;
     padding-top: 20px;
     padding-bottom: 30px;
     margin-bottom: 30px;
-    background-color: #E2EEE7;
+    background-color: white;
     box-sizing: border-box;
     font-family: "Tw Cen MT";
     font-size: 12pt;
@@ -111,13 +105,13 @@ p {
     text-align: center;
     letter-spacing: 12px;
     color: white;
-    border: 1px solid black;
+    border: none;
 }
 
 .textBox{
     position: relative;
     text-decoration: none;
-    color:black;
+    color:dimgray;
     bottom:10px;
 }
 #impressum {
@@ -125,5 +119,7 @@ p {
     margin: auto;
 }
 #newsdiv{
-text-align: center;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 40px;
 }
