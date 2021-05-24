@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: #ebefeb;
 }
 .box{
     position: absolute;
@@ -9,16 +10,19 @@ body{
     top: 50%;
     left:50%;
     transform: translate(-50%, -50%);
-    background-color: darkseagreen;
+    background-color: #86998c;
     text-align: center;
 }
 .box input[type = "text"], .box input[type = "password"]{
     border:0;
-    background: none;
+    background: white;
+    font-family: Verdana;
+    letter-spacing: 7px;
+    color: white;
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid lightblue;
+    border: 2px solid white;
     padding: 10px 10px;
     width: 200px;
     border-radius: 20px;
@@ -26,21 +30,28 @@ body{
 }
 .box h1{
     color: white;
-    font-weight: 500;
+    font-size: 55px;
+    font-family: "Tw Cen MT";
+    font-weight: lighter;
+    letter-spacing: 15px;
     text-transform: uppercase;
 }
 .box input[type = "text"]:focus, .box input[type = "password"]:focus{
     width: 280px;
-    border-color:teal;
+    border-color:white;
 }
 
 .box input[type="submit"], .box input[type="registration"]{
     border:0;
-    background: none;
+    background: #3a4c3c;
+    color: white;
+    text-transform: uppercase;
+    font-family: Verdana;
+    letter-spacing: 7px;
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid lightblue;
+    border: 2px solid #3a4c3c;
     padding: 10px 40px;
     
     border-radius: 20px;
