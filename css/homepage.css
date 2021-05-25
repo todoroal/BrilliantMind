@@ -1,14 +1,20 @@
 body {
-    display: flex;
-    margin-top: 50px;
-    justify-content: center;
     background-image: url("../images/homepage.png");
-    width: 1582px;
-    height: 1125px;
     font-family: Verdana;
 }
 
-.box input[type="submit"], .box input[type="registration"]{
+.box {
+    position: absolute;
+    width: 300px;
+    padding: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #86998c;
+    text-align: center;
+}
+
+.box input[type="Submit"], .box input[type="Registration"]{
     border:0;
     background: #3a4c3c;
     color: white;
@@ -20,11 +26,12 @@ body {
     text-align: center;
     border: 2px solid #3a4c3c;
     padding: 10px 40px;
+
     border-radius: 20px;
     transition: 0.5s;
     cursor: pointer;
 }
 
-.box input[type="submit"]:hover,.box input[type="registration"]:hover {
-    background: #7f9084;
+.box input[type="submit"]:hover,.box input[type="registration"]:hover{
+    background: #3e8e41;
 }
