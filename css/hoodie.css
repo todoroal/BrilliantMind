@@ -9,3 +9,14 @@
     display: block;
     background-color: #d2ffcc;
 }
+
+section {
+    position: fixed;
+    background-color: #cbffc8;
+    text-align: center;
+    display: inline;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 200px;
+}
