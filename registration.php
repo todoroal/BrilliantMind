@@ -1,9 +1,5 @@
 <?php
-    $cfg['Console']['Mode'] = 'show';
-    $cfg['Server']['hide_db'] = '';
-    $cfg['Server']['only_db'] = '';
-    $cfg['lang'] = 'de';
-
+    $nick = $_POST['nick']
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $password = $_POST['password'];
@@ -15,7 +11,7 @@
 
     //Databas connection
 
-    $conn = new mysqli('http://localhost/phpmyadmin/index.php?route=/database/structure&server=1&db=registration', 'root', '', 'registration')
+    $conn = new mysqli('localhost', 'root', '', 'registration')
     if($conn->connect_error){
         die('Connection Failed : '.$conn->connect_error);
     }
@@ -27,5 +23,6 @@
         echo "Registration Successfully...";
         $stmt->close();
         $conn->close();
+    
     }
 ?>

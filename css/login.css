@@ -18,7 +18,7 @@ body{
     background: white;
     font-family: Verdana;
     letter-spacing: 7px;
-    color: white;
+    color: black;
     display: block;
     margin: 20px auto;
     text-align: center;
@@ -27,6 +27,7 @@ body{
     width: 200px;
     border-radius: 20px;
     transition: 0.5s;
+
 }
 .box h1{
     color: white;
@@ -60,5 +61,5 @@ body{
 }
 
 .box input[type="submit"]:hover,.box input[type="registration"]:hover{
-    background: #2ecc71;
+    background: #3e8e41;
 }

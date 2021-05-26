@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>eshop</title>
+  <script src="Book.js" async></script>
   <link href="css/eshop.css" rel="stylesheet" type="text/css">
   <link href="css/hoodie.css" rel="stylesheet" type="text/css">
 </head>
@@ -40,49 +41,62 @@
   </nav>
 </div>
 
-<div class="column">
-    <h1>Männer</h1>
 
-  <img src="images/Unbenannt.png" height="799" width="601"/>
-  <div class="dropdown">
-    <button class="dropbtn">Size</button>
-    <div class="dropdown-content">
-      <a href="#">S</a>
-      <a href="#">M</a>
-      <a href="#">L</a>
-    </div>
-  </div>
-  <img src="images/pulloverschwarz.png" height="799" width="590"/>
-  <div class="dropdown">
-    <button class="dropbtn">Size</button>
-    <div class="dropdown-content">
-      <a href="#">S</a>
-      <a href="#">M</a>
-      <a href="#">L</a>
-    </div>
-  </div>
 
-  <h1>Frauen</h1>
 
-    <img src="images/pulloverblau.PNG" height="706" width="482"/>
-  <div class="dropdown">
-    <button class="dropbtn">Size</button>
-    <div class="dropdown-content">
-      <a href="#">S</a>
-      <a href="#">M</a>
-      <a href="#">L</a>
-    </div>
-  </div>
-     <img src="images/womenschwarz.png" height="707" width="486"/>
-  <div class="dropdown">
-    <button class="dropbtn">Size</button>
-    <div class="dropdown-content">
-      <a href="#">S</a>
-      <a href="#">M</a>
-      <a href="#">L</a>
-    </div>
-  </div>
 
+  <div class="Shop">
+    <div class="shop-items">
+      <div class="shop-item">
+        <span class="shop-item-title">Männerpulli Schwarz</span>
+        <img class="shop-item-image" src="images/pulloverschwarz.png">
+        <div class="shop-item-details">
+          <span class="shop-item-price">€19.99</span>
+          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+        </div>
+      </div>
+      <div class="shop-item">
+        <span class="shop-item-title">Männerpulli Weiß</span>
+        <img class="shop-item-image" src="images/Unbenannt.png">
+        <div class="shop-item-details">
+          <span class="shop-item-price">€19.99</span>
+          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+        </div>
+      </div>
+      <div class="shop-item">
+        <span class="shop-item-title">Frauenpulli Blau</span>
+        <img class="shop-item-image" src="images/pulloverblau.PNG">
+        <div class="shop-item-details">
+          <span class="shop-item-price">€19.99</span>
+          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+        </div>
+      </div>
+
+      <div class="shop-item">
+        <span class="shop-item-title">Frauenpulli Schwarz</span>
+        <img class="shop-item-image" src="images/womenschwarz.png">
+        <div class="shop-item-details">
+          <span class="shop-item-price">€19.99</span>
+          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+        </div>
+      </div>
+
+
+  <section class="container content-section">
+    <h2 class="section-header">CART</h2>
+    <div class="cart-row">
+      <span class="cart-item cart-header cart-column">ITEM</span>
+      <span class="cart-price cart-header cart-column">PRICE</span>
+      <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+    </div>
+    <div class="cart-items">
+    </div>
+    <div class="cart-total">
+      <strong class="cart-total-title">Total</strong>
+      <span class="cart-total-price">0€</span>
+    </div>
+    <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+  </section>
 
 </div>
 <footer>
