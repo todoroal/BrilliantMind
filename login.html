@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/login.css" rel="stylesheet" type="text/css">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/login.css" rel="stylesheet" type="text/css">
 
-    <title>Login</title>
-</head>
-
-<body>
+        <title>Login</title>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                var user,pass;
+                $("#submit").click(function(){
+                    user=$("#user").val();
+                    pass=$("#password").val();
+                    $.post("http://localhost:3000/login",{user: user,password: pass}, function(data){
+                    if(data === 'yes') {
+                        alert("login success");
+                       }
+                });
+             });
+        });
+        </script>
+    </head>
+    <body>
     
 <form class="box">
     <img src="images/title.png" height="13" width="200"/>
