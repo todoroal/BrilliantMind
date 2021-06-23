@@ -8,6 +8,28 @@
     <script sry="js/registration.js"></script>
     <script sry="js/regServer.js"></script>
     <title>Registration</title>
+    <script>
+        function validateForm() {
+            var fn = document.forms["refgorm"]["firstname"].value;
+            var ln = document.forms["refgorm"]["lastname"].value;
+            var gn = document.forms["refgorm"]["gender"];
+            var ctry = document.forms["refgorm"]["country"];
+
+            if (fn == null || fn == "") {
+                alert("First name cannot be blank");
+                return false;
+            }
+            else if (ln == null || ln == "") {
+                alert("Last name cannot be blank");
+                return false;
+            }
+            else if ((gn[0].checked == false) && (gn[1]checked == false))
+            {
+                alert("Please enter your gender");
+                return false;
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="main">
@@ -16,7 +38,7 @@
             Registration
         </div>
         
-        <form class="box" id="RegBox">
+        <form class="box" id="RegBox" method="post" onsubmit="validateForm()">
             <div class="input_field">
                 <label>ID</label>
                 <input type="text" class="input" id="nick" name="nick">
