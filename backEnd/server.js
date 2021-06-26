@@ -1,8 +1,9 @@
 const express = require('express') // import express
 const app = express()
-const bodyParser = require("body-parser")
+const cors = require('cors');
 const mongoose = require('mongoose')
 const port = 3000
+const UserModel = require('./models/user');
 
 
 //---------------Connection to DB
@@ -16,66 +17,31 @@ db.once('open', function callback () {
 })
 
 //---------------Middleware
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(cors());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-
-//---------------Schema-User
-var Schema = mongoose.Schema 
-var UserSchema = new Schema({ // MongoDB Schema for the pH Database
-    name: String,
-    password: String,
-    email: String
-}, {collection: 'User'})
-var UserModel = mongoose.model('User', UserSchema)
 
 
 //---------------Routes
 app.post('/register',async (req,res) => {
-    try {
-        var userName = req.body.name;
-        var password=req.body.password;
-        var email = req.body.email;
-        var myData = new UserModel(req.body)
-        await myData.save()
-        res.send("Data saved to Database")
-    } catch (err) {
-        console.error(err.message);
-        res.status(500).send('Server error');
-    }
+        const user = await UserModel.create(req.body);
+        user ? res.status(201).send(user) : res.status(400).send('Bad Request');
 });
-app.get('/userGet',  async (req,res) => {
-    try {
-        //await UserModel.findById('60d6111a10db723a9c1e946b')
-        //await UserModel.find.all();
-        await UserModel.find({name:req.body.name}, function(err, data){
-        res.send(data)
-        });
-    } catch (err) {
-        console.error(err.message)
-    }
+app.get('/userGet/:name',  async (req,res) => {
+        const user = await UserModel.findOne({name: req.params.name}).exec();
+        user ? res.status(200).send(user) : res.status(404).send('User not found');
 });
 
-app.delete('/userDelete', async (req, res) => {
-    await UserModel.findOneAndDelete({name:req.body.name}, (err) => {
-        if(err){
-            console.log(err);
-        }
-        else{
-            console.log('User deleted successfully...')
-        }
-    })
+app.delete('/userDelete/:name', async (req, res) => {
+    const user = await UserModel.findOneAndDelete({name: req.params.name}).exec();
+    user ? res.status(200).send(user) : res.status(404).send('User not found');
 });
 
 app.put('/userChangePassWord', async (req, res) => {
-    await UserModel.findOneAndUpdate({name:req.body.name},{password: req.body.password}, (error, data)=>{
-        if(error){
-            console.log(error);
-        }
-        else{
-            console.log('Password changed...')
-        }
-    })
+    const user = await UserModel.findOneAndUpdate({name:req.body.name},{password: req.body.password}).exec();
+    user ? res.status(200).send(user) : res.status(404).send('User not found');
+
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
