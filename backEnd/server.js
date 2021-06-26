@@ -13,15 +13,13 @@ var db = mongoose.connection
 
 db.on('error', console.error.bind(console, 'connection error:')); // Error for connection problems
 db.once('open', function callback () {
-    console.log('Conntected To Mongo Database');
+    console.log('Connected To Mongo Database');
 })
 
 //---------------Middleware
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-
 
 //---------------Routes
 app.post('/register',async (req,res) => {
