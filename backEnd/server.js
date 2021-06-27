@@ -6,6 +6,7 @@ const port = 3000
 const UserModel = require('./models/user');
 
 
+
 //---------------Connection to DB
 mongoose.Promise = global.Promise
 mongoose.connect('mongodb+srv://BrilliantMind:brilliantmind@cluster0.6i1mj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useNewUrlParser: true }, { useUnifiedTopology: true } );
