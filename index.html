@@ -48,8 +48,8 @@
     <h2>NEWS</h2>
     <div id="newsdiv">
 
-        <form class="Search" action="">
-            <input class="input" type="text" placeholder="What are you looking for.." />
+        <form id="search" action="">
+            <input id="test" class="input" type="text" placeholder="What are you looking for.." />
             <input type="submit" value="search"/>
 
         </form>
@@ -58,14 +58,14 @@
         </div>
 
         <script>
-            const searchForm = document.querySelector('.search');
+            const searchForm = document.querySelector('#search');
             const input=document.querySelector('.input');
             const newsList = document.querySelector('.news-list');
             
             searchForm.addEventListener('submit', retrieve)
 
             function retrieve(e){
-                
+                console.log("test")
                 newsList.innerHTML = ''
 
                 e.preventDefault()
@@ -73,11 +73,11 @@
                 const apiKey='572599cc9c194bf8a7942a038580ecab'
                 
                 let topic = input.value;
-                let url = ' https://newsapi.org/v2/everything?q=${topic}country=at&apiKey=572599cc9c194bf8a7942a038580ecab'
+                let url = `https://newsapi.org/v2/everything?q=${topic}&apiKey=572599cc9c194bf8a7942a038580ecab`
                 
                 
                 fetch(url).then((res)=>{
-                    returnres.json()
+                    return res.json()
                 }).then((data)=>{
                     console.log(data)
                     data.articles.array.forEach(article => {

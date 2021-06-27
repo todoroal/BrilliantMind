@@ -4,7 +4,7 @@ const cors = require('cors');
 const mongoose = require('mongoose')
 const port = 3000
 const UserModel = require('./models/user');
-
+const axios = require('axios');
 
 
 //---------------Connection to DB
@@ -44,3 +44,15 @@ app.put('/userChangePassWord', async (req, res) => {
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+
+app.get('/news', async(req,res)=>{
+
+    const apiKey='572599cc9c194bf8a7942a038580ecab'
+                
+    let topic = "corona"
+    let url = `https://newsapi.org/v2/everything?q=${topic}&apiKey=572599cc9c194bf8a7942a038580ecab`
+
+    const news = await axios.get(url)
+    console.log(news) 
+    res.json(news)
+})
