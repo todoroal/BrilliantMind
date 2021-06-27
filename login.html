@@ -1,38 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/login.css" rel="stylesheet" type="text/css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/login.css" rel="stylesheet" type="text/css">
+    <!--<script defer src="login-page.js"></script>-->
 
-        <title>Login</title>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                var user,pass;
-                $("#submit").click(function(){
-                    user=$("#user").val();
-                    pass=$("#password").val();
-                    $.post("http://localhost:3000/login",{user: user,password: pass}, function(data){
+
+    <title>Login</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var user,pass;
+            $("#submit").click(function(){
+                user=$("#user").val();
+                pass=$("#password").val();
+                $.post("http://localhost:3000/login",{user: user,password: pass}, function(data){
                     if(data === 'yes') {
                         alert("login success");
-                       }
+                        location.reload();
+                    }
+                    else {
+                        loginErrorMsg.style.opacity = 1;
+                    }
                 });
-             });
+            });
         });
-        </script>
-    </head>
-    <body>
-    
-<form class="box">
-    <img src="images/title.png" height="13" width="200"/>
-    <h1>Login</h1>
-    <input type="text" placeholder="Username">
-    <input type="password" placeholder="Password">
-    <input type="submit" value="Login">
-    <input type="registration" value="Registration">
-</form>
+    </script>
+</head>
+<body>
+
+<main id="main-holder">
+
+   <div id="login-error-msg-holder">
+        <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+    </div>
+
+    <form class="box">
+        <img src="images/title.png" height="13" width="200"/>
+        <h1>Login</h1>
+        <input type="text" name="username" id="username-field" class = "box-field" placeholder="Username">
+        <input type="password" name="password" id="password-field" class = "box-field"placeholder="Password">
+        <input type="submit" value="Login" id ="box-submit">
+        <input type="registration" value="Registration" id ="box-registration">
+    </form>
+</main>
 
 </body>
 </html>
